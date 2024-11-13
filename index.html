@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XAX - SlideScape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Category Selection -->
+  <div class="category-selection">
+    <h1>Pick Your Slideshow Category</h1>
+    <label for="category">Choose Category:</label>
+    <input type="text" id="category-search" placeholder="e.g cars, beach, cityscapes, computers, etc...." />
+    <button id="start-btn">Start Slideshow</button>
+    
+    <div class="input-group">
+      <label for="image-count">Number of Images:</label>
+      <input type="number" id="image-count" placeholder="e.g. 10" min="1" max="30" />
+    </div>
+  </div>
+
+  <!-- Slideshow Container -->
+  <div id="slideshow-container" class="hidden">
+    <img id="slideshow-image" src="" alt="Slideshow" />
+  </div>
+
+  <!-- Controls Container Below the Slideshow -->
+  <div class="controls hidden">
+    <button id="prev-btn">Prev</button>
+    <button id="next-btn">Next</button>
+    <label for="interval">Slide Interval (seconds):</label>
+    <input type="number" id="interval" value="1" min="1">
+    <button id="fullscreen-btn">Fullscreen</button>
+    <button id="download-btn">Download Image</button>
+    <button id="cancel-btn">Cancel</button>
+  </div>
+  
+  <audio id="background-audio" autoplay loop style="display: none;">
+    <source src="1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
